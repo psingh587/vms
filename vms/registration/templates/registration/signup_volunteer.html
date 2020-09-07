@@ -5,7 +5,7 @@
 {% load static %}
 
 {% block content %}
-
+                   
     <form class="signup form-signup" id="signup_form" method="post" action="{% url 'registration:signup_volunteer' %}" enctype="multipart/form-data">
         {% csrf_token %}
         <h2 class="header">{% trans "Sign Up" %}</h2>
@@ -108,7 +108,7 @@
                     {% trans "About" %}
                 </label>
                 <div class="controls">
-                    <textarea id="id_description" class="textinput textInput form-control" type="text" placeholder="{% blocktrans %}Include a short biography of yourself{% endblocktrans %}" name="vol-description" rows="5">{{ volunteer_form.description.value }}</textarea>
+                    <textarea id="id_description" style="resize:none" class="textinput textInput form-control" type="text" placeholder="{% blocktrans %}Include a short biography of yourself{% endblocktrans %}" name="vol-description" rows="5">{{ volunteer_form.description.value }}</textarea>
                     <p class="help-block">
                         <strong>
                             {% for error in volunteer_form.description.errors %}
@@ -124,7 +124,7 @@
                     {% trans "About" %}
                 </label>
                 <div class="controls">
-                    <textarea id="id_description" class="textinput textInput form-control" type="text" placeholder="{% blocktrans %}Include a short biography of yourself{% endblocktrans %}" name="vol-description" rows="5">{% if volunteer_form.description.value %}{{ volunteer_form.description.value }}{% endif %}</textarea>
+                    <textarea id="id_description" style="resize:none" class="textinput textInput form-control" type="text" placeholder="{% blocktrans %}Include a short biography of yourself{% endblocktrans %}" name="vol-description" rows="5">{% if volunteer_form.description.value %}{{ volunteer_form.description.value }}{% endif %}</textarea>
                 </div>
             </div>
         {% endif %}
@@ -376,7 +376,7 @@
                     {% trans "Profiles" %}
                 </label>
                 <div class="controls">
-                    <textarea id="id_websites" class="textinput textInput form-control" type="text" placeholder="{% blocktrans %}Include links to any online profiles here{% endblocktrans %}" name="vol-websites" rows="5">{{ volunteer_form.websites.value }}</textarea>
+                    <textarea id="id_websites" style="resize:none" class="textinput textInput form-control" type="text" placeholder="{% blocktrans %}Include links to any online profiles here{% endblocktrans %}" name="vol-websites" rows="5">{{ volunteer_form.websites.value }}</textarea>
                     <p class="help-block">
                         <strong>
                             {% for error in volunteer_form.websites.errors %}
@@ -392,7 +392,7 @@
                     {% trans "Profiles" %}
                 </label>
                 <div class="controls">
-                    <textarea id="id_websites" class="textinput textInput form-control" type="text" placeholder="{% blocktrans %}Include links to any online profiles here{% endblocktrans %}" name="vol-websites" rows="5">{% if volunteer_form.websites.value %}{{ volunteer_form.websites.value }}{% endif %}</textarea>
+                    <textarea id="id_websites" style="resize:none" class="textinput textInput form-control" type="text" placeholder="{% blocktrans %}Include links to any online profiles here{% endblocktrans %}" name="vol-websites" rows="5">{% if volunteer_form.websites.value %}{{ volunteer_form.websites.value }}{% endif %}</textarea>
                 </div>
             </div>
         {% endif %}
@@ -406,7 +406,7 @@
                     {% trans "Resume" %}
                 </label>
                 <div class="controls">
-                    <textarea id="id_resume" class="textinput textInput form-control" type="text" placeholder="{% blocktrans %}Alternatively, include your resume here{% endblocktrans %}" name="vol-resume" rows="5">{% if volunteer_form.resume.value %}{{ volunteer_form.resume.value }}{% endif %}</textarea>
+                    <textarea id="id_resume" style="resize:none" class="textinput textInput form-control" type="text" placeholder="{% blocktrans %}Alternatively, include your resume here{% endblocktrans %}" name="vol-resume" rows="5">{% if volunteer_form.resume.value %}{{ volunteer_form.resume.value }}{% endif %}</textarea>
                     <p class="help-block">
                         <strong>
                             {% for error in volunteer_form.resume.errors %}
@@ -422,7 +422,7 @@
                     {% trans "Resume" %}
                 </label>
                 <div class="controls">
-                    <textarea id="id_resume" class="textinput textInput form-control" type="text" placeholder="{% blocktrans %}Alternatively, include your resume here{% endblocktrans %}" name="vol-resume" rows="5"></textarea>
+                    <textarea id="id_resume" style="resize:none" class="textinput textInput form-control" type="text" placeholder="{% blocktrans %}Alternatively, include your resume here{% endblocktrans %}" name="vol-resume" rows="5"></textarea>
                 </div>
             </div>
 	{% endif %}
